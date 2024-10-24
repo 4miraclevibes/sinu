@@ -11,7 +11,6 @@ class LandingController extends Controller
     public function index()
     {
         $announcements = Announcement::all();
-        // dd(json_encode($announcements->toArray(), JSON_PRETTY_PRINT));
         return view('pages.frontend.landing', compact('announcements'));
     }
     public function program(Announcement $announcement)
